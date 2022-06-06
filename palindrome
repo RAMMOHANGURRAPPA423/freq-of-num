@@ -1,0 +1,28 @@
+#include<stdio.h>
+void palindrome(char arr[]);
+int main(){
+    char arr[10];
+    printf("enter a string:");
+    scanf("%s",arr);
+    palindrome(arr);
+}
+void palindrome(char arr[]){
+    int i=0,j=0,temp;
+    while(arr[i]!='\0')
+    if(arr[i]!=arr[j]){
+        break;
+    }
+    else{
+        i++;
+        j--;
+    }
+    if(arr[i]==arr[j])
+    temp=arr[i];
+    arr[i]=arr[j];
+    arr[j]=temp;
+    if(i>=j)
+    printf("palindrome");
+    else
+    printf("not palindrome");
+    
+}
